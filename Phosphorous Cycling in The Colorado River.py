@@ -77,30 +77,6 @@ C[selected_indices] += random_supply_values
 
 
 
-
-"""
-
-# Convert umol/day to umol/second (1 day = 86400 seconds)
-p_supply = p_supply * (1 / 86400)
-S_array = []
-for each in range(201):
-    supply = random.choice(p_supply)
-    S_array.append(supply)
-    
-C[(x >= 20000) & (x <= 40000)] += S_array 
-"""
-
-"""
-# Define tributary locations (in meters) and their phosphorus contribution
-tributaries = {
-    1000: 0.5,  # At 1000m, tributary adds 0.5 µg/m³
-    2000: 1.0,  # At 2000m, tributary adds 1.0 µg/m³
-    3500: 0.8,  # At 3500m, tributary adds 0.8 µg/m³
-}
-"""
-
-
-
 ### -----RUNNING THE MODEL THROUGH TIME----- ###
 
 totaltime = 100000
@@ -128,16 +104,6 @@ while time <= totaltime:
     newC = np.dot(A, C)
     C[:] = newC * 1
     
-
-    
-    """
-    # Add carbon from tributaries at each time step
-    for tributary_location, tributary_concentration in tributaries.items():
-        
-        # Find the index of the tributary location
-        tributary_index = np.where(x == tributary_location)[0][0]
-        C[tributary_index] += tributary_concentration 
-    """
     
     time += dt
 
