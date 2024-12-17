@@ -82,7 +82,7 @@ fluctuations = fluctuation_max * np.exp(-decay * x) + fluctuation_min
 """
 Utilized linear decay and exponential decay functions here to make my plot more accurate to how phosphorus levels decrease over time
 """
-C = np.array([np.random.normal(mean, fluc), for mean, fluc in zip(C_means, fluctuations)])
+C = np.array([np.random.normal(mean, fluc) for mean, fluc in zip(C_means, fluctuations)])
 
 # Generate random supply values for the selected range
 random_supply_values = np.random.uniform(s_min, s_max, num_elements)
