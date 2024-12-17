@@ -6,6 +6,21 @@ Created on Thu Dec 12 09:57:21 2024
 @author: zoeposner
 """
 
+"""
+NUTRIENT CYCLING IN THE COLORADO RIVER -> LOOKING AT PHOSPHORUS CONCENTRATIONS DOWNSTREAM OF LAKE POWELL
+1-D Advection Model of Phosphorus in the Colorado River
+
+IMPORTED DATA SETS:
+    - Colorado River Discharge Measurements: USGS Water Data, Colorado River Near Grand Canyon, AZ - 09402500
+        - https://waterdata.usgs.gov/monitoring-location/09402500/#dataTypeId=continuous-00060-0&period=P30D&showMedian=false
+        
+    - Phosphorus Concentration Data: USGS Data Source, Southwest Biological Science Center
+        - "Phosphorus, nitrogen, carbon, calcium, pH, and dissolved oxygen data from incubations of Colorado River water and sediment and associated ambient river water measurements"
+        - https://data.usgs.gov/datacatalog/data/USGS:638a77c2d34ed907bf79090e 
+
+"""
+
+
 import numpy as np
 import matplotlib.pyplot as plt
 import random as random
