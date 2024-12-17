@@ -17,7 +17,8 @@ The model outputs a figure that shows initial concentration of phosphorus in the
 Colorado River Discharge Measurements: USGS Water Data, Colorado River Near Grand Canyon, AZ - 09402500
 https://waterdata.usgs.gov/monitoring-location/09402500/#dataTypeId=continuous-00060-0&period=P30D&showMedian=false 
     
-Phosphorus Concentration Data: USGS Data Source, Southwest Biological Science Center      https://data.usgs.gov/datacatalog/data/USGS:638a77c2d34ed907bf79090e  
+Phosphorus Concentration Data: USGS Data Source, Southwest Biological Science Center 
+https://data.usgs.gov/datacatalog/data/USGS:638a77c2d34ed907bf79090e  
     
 #### Sources:
 
