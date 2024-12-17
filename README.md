@@ -6,10 +6,11 @@ This is a 1-D advection model that will attempt to show how phosphorus levels ch
 The model outputs a figure that shows initial concentration of phosphorus in the Colorado River as a range of values, and a final concentration that shows how these values move due to river velocity and flatten over time. 
 
 
-
 #### Inputs:
 
-#### Outputs:
+
+#### Outputs: 
+A plot of phosphorus concentration vs distance that shows how phosphorus moves through the Colorado River throughout the Grand Canyon over time. 
 
 
 #### Data:
