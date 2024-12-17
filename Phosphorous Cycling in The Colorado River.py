@@ -34,13 +34,11 @@ for i in range(30):
 
 
 
-
 ### -----SETTING UP  MODEL OVER SPACE, DISTANCE (M)----- ###
 dx = 1000
 x = np.arange(0,446000,dx) # over 446km - distance of Colorado River in Grand Canyon
 nodes = len(x)
 dt = dx/np.max(velocity) 
-
 
 
 ### -----GETTING PHOSPHOROUS DATA NEAR LAKE POWELL----- ###
@@ -66,7 +64,7 @@ C = np.ones(nodes)*C_array
 
 
 # Supply of phosphorus
-p_supply = np.array(river_location['umol/day'].dropna().tolist())
+p_supply = np.array(river_location['nanomol/day'].dropna().tolist())
 selected_indices = (x >= 1000) & (x <= 3000)
 num_elements = np.sum(selected_indices)
 
@@ -81,10 +79,10 @@ C[selected_indices] += random_supply_values
 
 ### -----RUNNING THE MODEL THROUGH TIME----- ###
 
-totaltime = 100000
+totaltime = 172800 # 48 hours in seconds
 
 fig, ax, = plt.subplots(1, 1, figsize = (11, 5))
-ax.plot(x, C, label = 'Initial Concentration', color = 'tab:blue')
+ax.plot(x / 1000, C, label = 'Initial Concentration', color = 'tab:blue')
 
 time = 0
 
@@ -105,16 +103,14 @@ while time <= totaltime:
     
     newC = np.dot(A, C)
     C[:] = newC * 1
-    
-    
     time += dt
 
-ax.plot(x, C, label = 'Concentration After X', color = 'tab:red', linewidth = 2)
-ax.set_xlabel('Distance (m)')
+ax.plot(x / 1000, C, label = 'Concentration After 48 Hours', color = 'tab:red', linewidth = 2)
+ax.set_xlabel('Distance (km)')
 ax.set_ylabel('Concentration (u/M)')
-ax.set_title('Phosphorus Concentration Over Time', fontsize = 14)
+ax.set_title('Phosphorus Concentration in the Colorado River Over Time', fontsize = 14)
 ax.grid(True)
-fig.legend(loc = 'upper right', fontsize=12)
+fig.legend(loc = 'upper right', fontsize=9)
 
 
 
