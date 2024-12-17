@@ -5,27 +5,25 @@ This is a 1-D advection model that will attempt to show how phosphorus levels ch
 
 The model outputs a figure that shows initial concentration of phosphorus in the Colorado River as a range of values, and a final concentration that shows how these values move due to river velocity and flatten over time. 
 
-
 #### Inputs:
-
+Velocity data, phosphorus concentration, phosphorus supply, linear decay function for concentrations (so output reflects real life process), exponential decay function for fluctuation in concentration values. 
 
 #### Outputs: 
 A plot of phosphorus concentration vs distance that shows how phosphorus moves through the Colorado River throughout the Grand Canyon over time. 
 
-
 #### Data:
 
-Colorado River Discharge Measurements: USGS Water Data, Colorado River Near Grand Canyon, AZ - 09402500
+- Colorado River Discharge Measurements: USGS Water Data, Colorado River Near Grand Canyon, AZ - 09402500
 https://waterdata.usgs.gov/monitoring-location/09402500/#dataTypeId=continuous-00060-0&period=P30D&showMedian=false 
     
-Phosphorus Concentration Data: USGS Data Source, Southwest Biological Science Center 
+- Phosphorus Concentration Data: USGS Data Source, Southwest Biological Science Center 
 https://data.usgs.gov/datacatalog/data/USGS:638a77c2d34ed907bf79090e  
     
 #### Sources:
 
-Lake Powell Research by Southwest Biological Science Center
+- Lake Powell Research by Southwest Biological Science Center
 https://www.usgs.gov/centers/southwest-biological-science-center/science/lake-powell-research 
 
-Special Seminar: How Lake Powell and the southwest mega-drought have fundamentally altered downstream nutrient dynamics by Bridget Deemer
+- Special Seminar: How Lake Powell and the southwest mega-drought have fundamentally altered downstream nutrient dynamics by Bridget Deemer
 https://newsroom.unl.edu/announce/snr/15638/88115 
 
