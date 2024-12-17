@@ -36,7 +36,7 @@ for i in range(30):
 
 
 ### -----SETTING UP  MODEL OVER SPACE, DISTANCE (M)----- ###
-dx = 100
+dx = 1000
 x = np.arange(0,446000,dx) # over 446km - distance of Colorado River in Grand Canyon
 nodes = len(x)
 dt = dx/np.max(velocity) 
@@ -50,9 +50,11 @@ CR_phosphate = pd.read_csv(file2)
 
 # Filter for rows where 'Sediment' is 'Glen'
 river_location = CR_phosphate[CR_phosphate['Sediment'] == 'Glen']
+initial_concentration  = river_location['uM'].mean()
 
 # Extract uM values for the filtered rows
 p_concentration = river_location['uM'].dropna().tolist()  # Convert to a list and drop NaNs
+p_concentration = [x for x in p_concentration if x > initial_concentration]
 
 # Initial concentration of phosphorous
 C_array = []
@@ -65,7 +67,7 @@ C = np.ones(nodes)*C_array
 
 # Supply of phosphorus
 p_supply = np.array(river_location['umol/day'].dropna().tolist())
-selected_indices = (x >= 20000) & (x <= 40000)
+selected_indices = (x >= 1000) & (x <= 3000)
 num_elements = np.sum(selected_indices)
 
 s_min = np.min(p_supply)  # Minimum supply value
