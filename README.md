@@ -9,7 +9,7 @@ The model outputs a figure that shows initial concentration of phosphorus in the
 Velocity data, phosphorus concentration, phosphorus supply, linear decay function for concentrations (so output reflects real life process), exponential decay function for fluctuation in concentration values. 
 
 #### Outputs: 
-A plot of phosphorus concentration vs distance that shows how phosphorus moves through the Colorado River throughout the Grand Canyon over time. 
+A plot of phosphorus concentration vs distance that shows how phosphorus moves through the Colorado River throughout the Grand Canyon over time. Because velocities are chosen randomly from the USGS data, each time you run my model you will get a slightly different final concentration line accordingly.
 
 #### Data:
 
