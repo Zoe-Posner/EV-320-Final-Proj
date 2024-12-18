@@ -135,7 +135,7 @@ while time <= totaltime:
 ax.plot(x / 1000, C, label = 'Concentration After 48 Hours', color = 'tab:red', linewidth = 2.5)
 ax.set_xlabel('Distance Throughout Grand Canyon (km)')
 ax.set_ylabel('Phosphorus Concentration (u/M)')
-ax.set_title('Phosphorus Concentration in the Colorado River Over Time', fontsize = 14)
+ax.set_title('Phosphorus Concentration in the Colorado River Over 48 Hours', fontsize = 14)
 ax.grid(True)
 fig.legend(loc = 'upper right', fontsize=9)
 
